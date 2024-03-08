@@ -1,12 +1,13 @@
 import ReactDOM from 'react-dom/client'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-//import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App.jsx'
-import LogiLoginSignUpPage from "./pages/ LoginSIgnUpPage.jsx"
+import AuthPage from "./pages/AuthPage.jsx"
 import Home from "./pages/Home.jsx"   
-import Portfolio from './pages/Portfolio.jsx'
-import Resume from './pages/Resume.jsx'
+
+
 
 const newRoute = createBrowserRouter([
   {
@@ -16,20 +17,20 @@ const newRoute = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <LogiLoginSignUpPage />
+        element: <Home />
       }, 
       {
-        path: '/Home',
-        element: <Home />
+        path: '/AuthPage',
+        element: <AuthPage />
       },
-      {
-        path: '/portfolio',
-        element: <Portfolio />
-      },
-      {
-        path: '/resume',
-        element: <Resume />
-      },
+    //   {
+    //     path: '/SingleQuest',
+    //     element: <SingleQuest />
+    //   },
+    //   {
+    //     path: '/StartQuest',
+    //     element: <StartQuest />
+    //   },
 
     ]
   }
